@@ -1,6 +1,7 @@
 ## Clone the Project
 
-First Clone the Project from the link https://github.com/ayusha95/spacex-program . Command: git clone https://github.com/ayusha95/spacex-program
+First Clone the Project from the link https://github.com/ayusha95/spacex-program . 
+Command: `git clone https://github.com/ayusha95/spacex-program`
 
 ## Install the Packages
 
