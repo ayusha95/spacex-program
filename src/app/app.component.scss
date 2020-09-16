@@ -1,6 +1,6 @@
 .whole-container {
     background-color: lightgrey;
-    height: 100vh;
+    height: 100%;
 }
 
 .title {
@@ -20,4 +20,29 @@
     margin-right: 0rem;
     margin-left: 0rem;
     display: inline;
+}
+
+.launch-container {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.launch-card {
+    width: 18rem;
+    height: 32rem;
+}
+
+.img-highlight {
+    background-color: lightgray;
+    margin-top: 10px;
+    width: 256px;
+    height: 256px;
+}
+
+.result-text-style {
+    color: #2f5496;
+}
+
+.filter-title-gap {
+    margin-bottom: 2rem;
 }

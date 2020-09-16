@@ -2,22 +2,22 @@
     <h2 class="title">SpaceX Launch Programs</h2>
 
     <div class="container base-container">
-        <div class="row">
-            <div class="col-lg-2 col-md-6 col-xl-2">
+        <div class="row" style="margin-left: 0rem;margin-right: 0rem;">
+            <div class="col-lg-2 col-md-2 col-xl-2">
                 <div class="card" style="background-color: white;">
                     <div class="card-body">
-                        <div>
+                        <div class="filter-title-gap">
                             <h5 class="card-title">Filters</h5>
                             <div class="card-subtitle">Launch Year</div>
                             <div class="container">
-                                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 justify-content-between">
-                                    <div *ngFor="let year of launch_year" style="margin-bottom: 0.5rem;">
+                                <div class="row row-cols-2 justify-content-between">
+                                    <div *ngFor="let year of launch_year" style="margin-bottom: 0.5rem;margin-right:0.5rem;">
                                         <button type="button" class="btn btn-success col" (click)="year_click(year)">{{year}}</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="filter-title-gap">
                             <div class="card-subtitle">Successful Launch</div>
                             <div class="container">
                                 <div class="row row-cols-2 justify-content-between">
@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="filter-title-gap">
                             <div class="card-subtitle">Successful Landing</div>
                             <div class="container">
                                 <div class="row row-cols-2 justify-content-between">
@@ -42,33 +42,33 @@
             </div>
             <div class="col-lg-10 col-md-6 col-xl-10">
                 <div style="margin-bottom: 1rem;">
-                    <div style="display: flex;justify-content:center;">
+                    <div class="d-flex justify-content-center">
                         <div class="spinner-border text-secondary" role="status" *ngIf="showloader == true">
                             <span class="sr-only">Loading...</span>
                         </div>
                     </div>
 
-                    <div style="display: flex;flex-wrap: wrap;" *ngIf="showloader == false">
-                        <div *ngFor="let launchdetails of launches" style="margin-right: 1rem;margin-bottom: 1rem;">
-                            <div class="card" style="width: 18rem;height:32rem;">
-                                <div *ngIf="launchdetails.links.mission_patch_small != null" style="display: flex;justify-content:center;">
-                                    <img src="{{launchdetails.links.mission_patch_small}}" style="background-color: lightgray;margin-top: 10px;width:256px;height:256px;">
+                    <div class="d-flex flex-wrap" *ngIf="showloader == false">
+                        <div *ngFor="let launchdetails of launches" class="launch-container">
+                            <div class="card launch-card">
+                                <div *ngIf="launchdetails.links.mission_patch_small != null" class="d-flex justify-content-center">
+                                    <img src="{{launchdetails.links.mission_patch_small}}" class="img-highlight">
                                 </div>
                                 <div class="card-body">
-                                    <h6 class="card-title" style="color: #2f5496;">{{launchdetails.mission_name}} &nbsp;#{{launchdetails.flight_number}}</h6>
+                                    <h6 class="card-title result-text-style">{{launchdetails.mission_name}} &nbsp;#{{launchdetails.flight_number}}</h6>
                                     <h6>Mission Ids:</h6>
                                     <ul *ngIf="launchdetails.mission_id.length > 0">
-                                        <li *ngFor="let ids of launchdetails.mission_id" style="color: #2f5496;">{{ids}}</li>
+                                        <li *ngFor="let ids of launchdetails.mission_id" class="result-text-style">{{ids}}</li>
                                     </ul>
-                                    <div style="display: flex;align-items: center;">
+                                    <div class="d-flex align-items-center">
                                         <h6>Launch Year:</h6>
-                                        <h6 style="color: #2f5496;font-weight: 400;">&nbsp;{{launchdetails.launch_year}}</h6>
+                                        <h6 class="result-text-style" style="font-weight: 400;">&nbsp;{{launchdetails.launch_year}}</h6>
                                     </div>
-                                    <div style="display: flex;align-items: center;">
+                                    <div class="d-flex align-items-center">
                                         <h6>Successful Launch:</h6>
-                                        <h6 style="color: #2f5496;font-weight: 400;">&nbsp;{{launchdetails.launch_success}}</h6>
+                                        <h6 class="result-text-style" style="font-weight: 400;">&nbsp;{{launchdetails.launch_success}}</h6>
                                     </div>
-                                    <div style="display: flex;align-items: center;">
+                                    <div class="d-flex align-items-center">
                                         <h6>Successful Landing:</h6>
                                     </div>
                                 </div>
