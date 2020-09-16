@@ -1,27 +1,24 @@
-# SpacexApp
+## Clone the Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+First Clone the Project from the link https://github.com/ayusha95/spacex-program . Command: git clone https://github.com/ayusha95/spacex-program
+
+## Install the Packages
+
+After cloning the project, run `npm install` which installs all the packages used in the project.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Project Description:
 
-## Build
+1. First once the page is loaded, all the SpaceX Program till limit 100 will be loaded.
+2. On the Left Side, few filters are given.
+    a. Launch Year --> Click on any year , it will show the SpaceX Program details conducted on that year.
+    b. Successful Launch & Successful Landing--> On the basis of true/false inputs, data is loaded.
+    
+ 
+    
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
